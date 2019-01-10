@@ -1,8 +1,9 @@
 # Tips
 
 ## 入力
-- int(input())
-- map(int, input().split(' '))
+- x = int(input())
+- x, y, z = input().split()
+- 数値 x, y, z = map(int, input().split(' '))
 - 改行ありの入力 : [input for _ in range(n)]
 
 ## 出力
@@ -17,3 +18,7 @@
 
 - from copy import deepcopy
 - from copy import copy
+
+## 判定
+
+- isdigit()
