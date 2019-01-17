@@ -2,22 +2,23 @@ import sys
 input = sys.stdin.readline
 
 n = int(input())
-m = list(map(int, input().split()))
+A = list(map(int, input().split()))
 q = int(input())
-t = list(map(int, input().split()))
+T = list(map(int, input().split()))
+
+def solve(i, m):
+    global n
+    if m == 0:
+        return 1
+    if i >= n:
+        return 0
+    res = solve(i+1, m) or solve(i+1, m-A[i])
+    return res
 
 S = [None] * n
-for i in range(n):
-    S[i] = 0
 
-def rec(i):
-    if i == n:
-        print(S)
-        return
-
-    rec(i+1)
-    S[i] = 1
-    rec(i+1)
-    S[i] = 0
-
-rec(0)
+for i in range(q):
+    if solve(0, T[i]):
+        print("yes")
+    else:
+        print("no")
