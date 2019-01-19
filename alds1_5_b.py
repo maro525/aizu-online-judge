@@ -1,3 +1,9 @@
+'''
+マージソート
+安定高速
+分割統治法のアルゴリズム
+'''
+
 # INF = int(float('inf'))
 import sys
 import math

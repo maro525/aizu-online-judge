@@ -1,3 +1,11 @@
+'''
+クイックソート
+分割統治法に基づくアルゴリズム。ただし、統治がない
+安定ではない、インプレースソート
+兵員の計算量O(nlogn)
+https://github.com/maro525/aizu-online-judge/blob/master/alds1_46_b.pyのパーティションを使う 
+'''
+
 import sys
 INF = sys.maxsize
 

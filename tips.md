@@ -31,6 +31,9 @@ x = int(input())
 - 改行なしの出力  
 `print("hello", end="")`
 
+- p = sys.stdout.write  
+`p("HELLO")`
+
 ## 数字
 - 無限大
     - float型の無限大  
@@ -74,6 +77,22 @@ https://qiita.com/_-_-_-_-_/items/89e966df1c1764f70690
 - 分割統治法
     - 最大値問題  
     https://scrapbox.io/tech-hdmr/%E5%88%86%E5%89%B2%E7%B5%B1%E6%B2%BB%E6%B3%95%E3%81%A7%E6%9C%80%E5%A4%A7%E5%80%A4%E5%95%8F%E9%A1%8C%E3%82%92%E8%A7%A3%E3%81%8F%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0
+
+## ソート
+### Python標準
+- `sorted(list)`
+- `list.sort()`
+- 降順のソート  
+`sorted(list, reverse=True)`
+
+### ソートアルゴリズム
+- マージソート  
+https://github.com/maro525/aizu-online-judge/blob/master/alds1_5_b.py
+- 計数ソート
+https://github.com/maro525/aizu-online-judge/blob/master/alds1_6_a.py
+- バブルソート
+- クイックソート  
+https://github.com/maro525/aizu-online-judge/blob/master/alds1_6_c.py
 
 
 ## 参考
