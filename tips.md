@@ -29,7 +29,8 @@ x = int(input())
 ``" ".join([Array])``
 
 - 改行なしの出力  
-`print("hello", end="")`
+`print("hello", end="")`  
+`p = sys.stdout.write` `p(***)`
 
 - p = sys.stdout.write  
 `p("HELLO")`
@@ -41,9 +42,22 @@ x = int(input())
     `sys.maxsize`
     - Python3は，int型に上限はない
 
+## 三項演算子
+- `(変数) = (条件がTrueのときの値) if (条件) else (条件がFalseのときの値)`
+
 ## forループ
 - 降順 :  
 `range(start, end, step)`
+
+## 配列
+- n個の要素を持つ配列がほしいとき  
+`[0 for i in range(n)]`
+
+- 長さ  
+`len(list)`
+
+- インデクスをゲットする  
+`list.index(x)`
 
 ## コピー
 - オブジェクトのコピー（☓参照）  
