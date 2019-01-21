@@ -1,6 +1,6 @@
 '''
 二分探索木
-探索
+削除
 '''
 import sys
 p = sys.stdout.write
@@ -10,6 +10,7 @@ class Node:
         self.data = _d
         self.left = None
         self.right = None
+        self.parent = None
 
 class BST:
     def __init__(self):
@@ -25,15 +26,15 @@ class BST:
                 if data < x:
                     if n.left is None:
                         n.left = Node(data)
+                        n.left.parent = n
                         return
                     n = n.left
-                elif data > x:
+                else:
                     if n.right is None:
                         n.right = Node(data)
+                        n.right.parent = n
+                        return
                     n = n.right
-                else:
-                    n.data = data
-                    return
 
     def find(self, k):
         u = self.root
@@ -43,6 +44,46 @@ class BST:
             else:
                 u = u.right
         return u
+
+    def delete(self, k):
+        if k.left is None or k.right is None:
+            y = k
+        else:
+            y = self.getSuccessor(k)
+
+        if y.left is not None:
+            x = y.left
+        else:
+            x = y.right
+
+        if x is not None:
+            x.parent = y.parent
+
+        if y.parent is None:
+            self.root = x
+        elif y == y.parent.left:
+            y.parent.left = x
+        else:
+            y.parent.right = x
+
+        if y != k:
+            k.key = y.key
+
+    def getSuccessor(self, k):
+        if k.right is not None:
+            return self.getMinimum(k.right)
+
+        y = k.parent
+        while y is not None and k == y.right:
+            k = y
+            y = y.parent
+        return y
+
+
+    def getMinimum(self, k):
+        while k.left is not None:
+            k = k.left
+        return k
 
     def inorder(self, n):
         if n is not None:
@@ -76,3 +117,7 @@ for i in range(n):
             print('yes')
         else:
             print('no')
+    elif k[0] == "d":
+        _, a = k.split()
+        z = bst.find(int(a))
+        bst.delete(z)
