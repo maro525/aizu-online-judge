@@ -10,7 +10,8 @@
 - 数値  
 `list = list(map(int, input().split()))`  
 `[int(i) for i in input().split(" ")] `  
-`x, y, z = map(int, input().split(' '))`
+`x, y, z = map(int, input().split(' '))`  
+`x, y = [int(s) for s in input().split(" ")]`
 
 - 改行ありの入力  
 `[input for _ in range(n)]`
