@@ -3,31 +3,47 @@
 Minimym Spanning Tree
 '''
 
+BLACK = 2
+GRAY = 1
+WHITE = 0
+
 if __name__ == '__main__':
 
     n = int(input())
     M = [list(map(int, input().split())) for i in range(n)]
 
-    used = [False] * n
-    mincost = [float("inf")] * n
+    color = [0] * n
+    weight = [float("inf")] * n
+    parent = [None] * n
 
     def prim():
-        mincost[0] = 0
-        sum = 0
+        weight[0] = 0
+        parent[0] = -1
 
         while True:
-            v = -1
+            mincost = float("inf")
             for i in range(n):
-                if (not used[i]) and (v == -1 or mincost[i] < mincost[v]):
-                    v = i
-            if v == -1:
+                if color[i] != BLACK and weight[i] < mincost:
+                    mincost = weight[i]
+                    u = i
+
+            if mincost == float("inf"):
                 break
-            used[v] = True
-            sum += mincost[v]
-            print(sum)
-            for i in range(n):
-                mincost[i] = min(mincost[i], M[v][i])
 
-        return sum
+            color[u] = BLACK
 
-    print(prim())
+            for v in range(n):
+                if color[v] != BLACK and M[u][v] != -1:
+                    if M[u][v] < weight[v]:
+                        weight[v] = M[u][v]
+                        parent[v] = u
+                        color[v] = GRAY
+
+    prim()
+
+    sum = 0
+    for i in range(n):
+        if parent[i] != -1:
+            sum += M[i][parent[i]]
+
+    print(sum)
