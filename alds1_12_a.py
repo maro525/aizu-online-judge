@@ -1,11 +1,11 @@
 '''
 最小全域木
 Minimym Spanning Tree
+
+プリムのアルゴリズム
 '''
 
-BLACK = 2
-GRAY = 1
-WHITE = 0
+
 
 if __name__ == '__main__':
 
