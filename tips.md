@@ -88,6 +88,9 @@ http://www.geocities.jp/m_hiroi/light/python05.html#chap11
 - 配列によるリングバッファ  
 https://github.com/maro525/aizu-online-judge/blob/master/alds1_3_b.py
 
+- キュー  
+`from collections import deque`
+
 ## アルゴリズム
 - 速い線形探索   
 https://scrapbox.io/tech-hdmr/%E7%B7%9A%E5%BD%A2%E6%8E%A2%E7%B4%A2  
@@ -111,6 +114,8 @@ https://github.com/maro525/aizu-online-judge/blob/master/alds1_9_c.py
 - `list.sort()`
 - 降順のソート  
 `sorted(list, reverse=True)`
+- ソートでkeyにしたい要素を指定  
+`sorted(list, key=lambda x: [keyにしたい要素])`
 
 ### ソートアルゴリズム
 - マージソート  
@@ -120,7 +125,6 @@ https://github.com/maro525/aizu-online-judge/blob/master/alds1_6_a.py
 - バブルソート
 - クイックソート  
 https://github.com/maro525/aizu-online-judge/blob/master/alds1_6_c.py
-
 
 ## 参考
 - 【Pythonチュートリアル】データ構造 - Qiita  
