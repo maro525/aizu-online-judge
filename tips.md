@@ -91,6 +91,10 @@ https://github.com/maro525/aizu-online-judge/blob/master/alds1_3_b.py
 - キュー  
 `from collections import deque`
 
+- 二分探索モジュール
+    - リストの順序を常に保つ  
+    `import bisect`
+
 ## アルゴリズム
 - 速い線形探索   
 https://scrapbox.io/tech-hdmr/%E7%B7%9A%E5%BD%A2%E6%8E%A2%E7%B4%A2  
