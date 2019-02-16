@@ -1,3 +1,8 @@
+'''
+線形探索
+番兵を置いた線形探索
+'''
+
 import sys
 input = sys.stdin.readline
 

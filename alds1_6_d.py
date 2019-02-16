@@ -23,26 +23,31 @@ def solve():
     B = a.copy()
     V = [False for _ in range(n)]
     B.sort()
-    T = [0] * (VMAX+1)
+    T = [0] * (VMAX+1) # 正しいインデックスを入れる
+    print(B)
     for i in range(n):
         T[B[i]] = i
+    print(T)
     for i in range(n):
         if V[i]:
             continue
         cur = i
-        S = 0
-        m = VMAX
-        an = 0
+        S = 0 # sum of weight
+        m = VMAX # min of circle
+        an = 0 # length of cicle
         while 1:
             V[cur] = True
+            print(V)
             an += 1
             v = a[cur]
             m = min(m, v)
+            print("v = {}".format(v))
             S += v
             cur = T[v]
+            print("cur = {}".format(cur))
             if V[cur]:
                 break
-        ans += min(S + (an-2) * m, m+S+(an+1)*s)
+        ans += min(S + (an-2) * m, m + S + (an+1) * s)
     return ans
 
 print(solve())

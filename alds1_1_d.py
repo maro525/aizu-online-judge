@@ -1,3 +1,8 @@
+'''
+最大利益
+Maximum Profit
+'''
+
 n = int(input())
 r0 = int(input())
 maxv = -10000

@@ -1,3 +1,7 @@
+'''
+連結リスト
+'''
+
 import sys
 input = sys.stdin.readline
 

@@ -1,3 +1,9 @@
+'''
+探索の応用
+最適解の計算
+Allocation
+'''
+
 import sys
 input = sys.stdin.readline
 

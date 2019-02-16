@@ -1,3 +1,7 @@
+'''
+バブルソート
+'''
+
 def bubbleSort(A, N):
     flg = 1
     i = 0

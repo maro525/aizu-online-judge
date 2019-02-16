@@ -1,3 +1,7 @@
+'''
+スタック
+'''
+
 class Stack:
     def __init__(self, max_size=100):
         self.top = 0

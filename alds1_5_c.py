@@ -1,3 +1,7 @@
+'''
+コッホ曲線
+'''
+
 from math import *
 
 class Point:

@@ -1,3 +1,8 @@
+'''
+全探索
+Exhaustive Search
+'''
+
 import sys
 input = sys.stdin.readline
 

@@ -1,3 +1,8 @@
+'''
+安定なソート
+バブルソートと選択ソートで検証
+'''
+
 from copy import copy
 n = int(input())
 a = [x for x in input().split(' ')]

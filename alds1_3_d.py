@@ -1,3 +1,7 @@
+'''
+面積計算
+'''
+
 import sys
 input = sys.stdin.readline
 

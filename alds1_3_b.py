@@ -1,3 +1,8 @@
+'''
+キュー
+リングバッファ
+'''
+
 class Queue:
     def __init__(self, max_size=10):
         self.bufferMax = max_size+1
